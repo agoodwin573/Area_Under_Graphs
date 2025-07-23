@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import quad
-from docx import Document
-from docx.shared import Cm
-from docx.shared import Inches
-from io import BytesIO
+#from docx import Document
+#from docx.shared import Cm
+#from docx.shared import Inches
+#from io import BytesIO
 import random
 from statistics import NormalDist
 
@@ -17,10 +17,10 @@ def add_figure_to_docx(fig):
     fig.tight_layout()
 
     # Save to a buffer with bbox_inches='tight'
-    memfile = BytesIO()
-    fig.savefig(memfile, format='pdf',) #bbox_inches='tight', pad_inches=0)
-    document.add_picture(memfile, height=Inches(2))
-    memfile.close()
+    #memfile = BytesIO()
+    #fig.savefig(memfile, format='pdf',) #bbox_inches='tight', pad_inches=0)
+    #document.add_picture(memfile, height=Inches(2))
+    #memfile.close()
     
 def plot_shaded_area(func, x_min, x_max, func_label="f(x)", num_points=1000):
     global Solutions, counter
